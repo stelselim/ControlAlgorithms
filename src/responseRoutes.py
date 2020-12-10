@@ -2,6 +2,8 @@ from flask import Blueprint, request
 # pylint: disable=C0321
 from src.utility.makeSystem import makeSystem  
 from src.response.step import stepInfoSystem,stepResponseOfSystem  
+from src.response.ramp import rampResponseOfSystem
+from src.response.impulse import impulseResponseOfSystem
 
 
 response = Blueprint('response', __name__, template_folder='templates')
@@ -21,10 +23,17 @@ def stepinfoRouter():
 
 
 
+@response.route('/rampresponse')
+def rampresponseRouter():
+    num = request.args.get('num')
+    den = request.args.get('den')
+    return rampResponseOfSystem(makeSystem(num,den))
 
-
-
-
+@response.route('/impulseresponse')
+def impulseresponseRouter():
+    num = request.args.get('num')
+    den = request.args.get('den')
+    return impulseResponseOfSystem(makeSystem(num,den))
 
 
 

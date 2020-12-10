@@ -7,9 +7,8 @@ import numpy as np
 # Returns x and y points
 # Ex: {'x':[1,2,3],'y':[1,4,9]}
 
-def rampResponseOfSystem(sys: control.TransferFunction):
-    factor = control.TransferFunction([1],[1, 0]) # 1/s
-    res = control.step_response(factor*sys)
+def impulseResponseOfSystem(sys: control.TransferFunction):
+    res = control.impulse_response(sys)
     x = res[0].tolist()
     y = res[1].tolist()
     response = {"x": x, "y": y}
