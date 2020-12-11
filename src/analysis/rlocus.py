@@ -10,16 +10,17 @@ import numpy as np
 
 # Now SISO Only
 def rlocusOfSystem(sys: control.TransferFunction):
+    try:
+        if not control.issiso(sys):
+            return json.dumps({"Error":"Only Single Input Single Output"})
 
-    if not control.issiso(sys):
-        return json.dumps({"Error":"Only Single Input Single Output"})
-
-    res = control.root_locus(sys) # pylint: disable=no-member
-    x = res[0].tolist()
-    y = res[1].tolist()
-    response = {"x": x,"y":y}
-    return json.dumps(response)
-
+        res = control.root_locus(sys,Plot=False) # pylint: disable=no-member
+        x = res[0].tolist()
+        y = res[1].tolist()
+        response = {"x": x,"y":y}
+        return json.dumps(response)
+    except:
+        return json.dumps({"Error": "Error with rlocusOfSystem"}) 
 # For Debugging
 # a = rlocusOfSystem(control.TransferFunction([1],[1,2]))
 # print(a)
