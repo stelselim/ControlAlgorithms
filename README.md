@@ -436,7 +436,7 @@ transfer function
 
 #### den=1,5,2   for s^2 + 5*s + 2  
 
-#### URL = https://controlalgo.ey.r.appspot.com/makeclosedloop?num=1,2&den=1,5,2
+#### URL = https://controlalgo.ey.r.appspot.com/closedloop/unitfeedback?num=1,2&den=1,5,2
 
 <br>
 
