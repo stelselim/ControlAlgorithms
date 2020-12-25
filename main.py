@@ -23,7 +23,7 @@ def handle_exception(e):
 
 @app.route('/')
 def welcomePage():
-    f = open('README.md', 'r') 
+    f = open('home.md', 'r') 
     md = f.read()
     f.close()
     return markdown.markdown(md)
