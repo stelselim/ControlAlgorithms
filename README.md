@@ -8,16 +8,28 @@
 
 <br>
 
+
+
+### Contact
+Maintainer: Selim Üstel<br/>
+<ul>
+  <li> <a href="https://stelselim.github.io"> Website</a> </li>
+  <li> <a href="https://www.linkedin.com/in/selimustel/"> Linkedin</a> </li>
+  <li> <a href="https://github.com/stelselim"> Github</a> </li>
+</ul>
+
+
+
+
 ### Currently, available features:
-* stepresponse
-* stepinfo
-* rampresponse
-* impulseresponse
-* bodeplot
-* nyquistplot
-* rlocusplot
-* makeclosedloop
-* closedloop/unitfeedback
+* <a href="https://github.com/stelselim/ControlAlgorithms#stepresponse"> stepresponse </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#stepinfo"> stepinfo </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#rampresponse"> rampresponse </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#impulseresponse"> impulseresponse </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#bodeplot"> bodeplot </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#nyquistplot"> nyquistplot </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#rlocusplot"> rlocusplot </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#closedloop/unitfeedback"> closedloop/unitfeedback </a>
 
 ### How To Use
 
@@ -438,16 +450,5 @@ transfer function
 
 #### URL = https://controlalgo.ey.r.appspot.com/closedloop/unitfeedback?num=1,0,2&den=2,0,5,2
 
-
-
-
-
-### Contact
-Maintainer: Selim Üstel<br/>
-<ul>
-  <li> <a href="https://stelselim.github.io"> Website</a> </li>
-  <li> <a href="https://www.linkedin.com/in/selimustel/"> Linkedin</a> </li>
-  <li> <a href="https://github.com/stelselim"> Github</a> </li>
-</ul>
 
 
