@@ -29,7 +29,7 @@ Maintainer: Selim Üstel<br/>
 * <a href="https://github.com/stelselim/ControlAlgorithms#bodeplot"> bodeplot </a>
 * <a href="https://github.com/stelselim/ControlAlgorithms#nyquistplot"> nyquistplot </a>
 * <a href="https://github.com/stelselim/ControlAlgorithms#rlocusplot"> rlocusplot </a>
-* <a href="https://github.com/stelselim/ControlAlgorithms#closedloop/unitfeedback"> closedloop/unitfeedback </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#closedloopunitfeedback"> closedloop/unitfeedback </a>
 
 
 <br/>
