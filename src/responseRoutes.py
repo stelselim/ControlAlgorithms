@@ -1,4 +1,5 @@
 from flask import Blueprint, request
+import json as json
 # pylint: disable=import-error
 from src.utility.makeSystem import makeSystem  
 from src.response.step import stepInfoSystem,stepResponseOfSystem  
@@ -10,39 +11,43 @@ response = Blueprint('response', __name__, template_folder='templates')
 
 @response.route('/stepresponse')
 def stepresponseRouter():
-    num = request.args.get('num')
-    den = request.args.get('den')
-    return stepResponseOfSystem(makeSystem(num,den))
+    try:
+        num = request.args.get('num')
+        den = request.args.get('den')
+        return stepResponseOfSystem(makeSystem(num,den))
+    except:
+        return json.dumps({"Error": "Error with stepresponse"}) 
 
 
 @response.route('/stepinfo')
 def stepinfoRouter():
-    num = request.args.get('num')
-    den = request.args.get('den')
-    return stepInfoSystem(makeSystem(num,den))
+    try:
+        num = request.args.get('num')
+        den = request.args.get('den')
+        return stepInfoSystem(makeSystem(num,den))
+    except:
+        return json.dumps({"Error": "Error with stepinfo"}) 
+   
 
 
 
 @response.route('/rampresponse')
 def rampresponseRouter():
-    num = request.args.get('num')
-    den = request.args.get('den')
-    return rampResponseOfSystem(makeSystem(num,den))
+    try:
+        num = request.args.get('num')
+        den = request.args.get('den')
+        return rampResponseOfSystem(makeSystem(num,den))
+    except:
+        return json.dumps({"Error": "Error with rampresponse"}) 
+
+    
 
 @response.route('/impulseresponse')
 def impulseresponseRouter():
-    num = request.args.get('num')
-    den = request.args.get('den')
-    return impulseResponseOfSystem(makeSystem(num,den))
-
-
-
-
-
-# @analysis.route('/step/', methods=['GET'])
-# def hello(username):
-#     return "Hello {}".format(username)
-
-# @app.route('/login/<username>', methods=['GET'])
-# def hello(username):
-#     return "Hello {}".format(username)
+    try:
+        num = request.args.get('num')
+        den = request.args.get('den')
+        return impulseResponseOfSystem(makeSystem(num,den))
+    except:
+        return json.dumps({"Error": "Error with impulseresponse"}) 
+    

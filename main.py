@@ -1,13 +1,24 @@
 from src.responseRoutes import response
 from src.analysisRoutes import analysis
 from src.utilityRouter import utility
-from flask import Flask, request
+from werkzeug.exceptions import InternalServerError
+from werkzeug.exceptions import HTTPException
+from flask import Flask, request, render_template
 import markdown
 
 app = Flask(__name__)
+
 app.register_blueprint(response)
 app.register_blueprint(analysis)
 app.register_blueprint(utility)
+
+
+# An Error Occured
+@app.errorhandler(Exception)
+def handle_exception(e):
+    return """<div style='padding:15'>
+    <h1>Page Not Found</h1> \nPlease, check <a href=\"https://controlalgo.ey.r.appspot.com/\"> the documentation.</a> <br>https://controlalgo.ey.r.appspot.com/
+    </div>"""
 
 
 @app.route('/')
