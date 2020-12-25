@@ -15,9 +15,13 @@ def rlocusOfSystem(sys: control.TransferFunction):
         return json.dumps({"Error":"Only Single Input Single Output"})
 
     res = control.root_locus(sys,Plot=False) # pylint: disable=no-member
+    points = []
     x = res[0].tolist()
     y = res[1].tolist()
-    response = {"x": x,"y":y}
+    for i in range(len(x)):
+        points.append([x[i][0],y[i]])
+    print(points)
+    response = {"points":points}
     return json.dumps(response)
 # For Debugging
 # a = rlocusOfSystem(control.TransferFunction([1],[1,2]))

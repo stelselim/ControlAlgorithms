@@ -18,7 +18,7 @@ def makeclosedloopRouter():
         sys = makeClosedLoopSystem(num, den, feedbackNum, feedbackDen)
         sysNum = sys.num[0][0]
         sysDen = sys.den[0][0]
-        return json.dumps({"systemNumerator": sysNum.__str__(),"systemDenominator":sysDen.__str__()})
+        return json.dumps({"systemNumerator": sysNum.tolist(),"systemDenominator":sysDen.tolist()})
     except:
         return json.dumps({"Error": "Error with makeclosedloop"})
 
@@ -30,7 +30,7 @@ def closedloopWithUnitFeedbackRouter():
         sys = makeClosedLoopWithUnitSystem(num, den)
         sysNum = sys.num[0][0]
         sysDen = sys.den[0][0]
-        return json.dumps({"systemNumerator": sysNum.__str__(),"systemDenominator":sysDen.__str__()})
+        return json.dumps({"systemNumerator": sysNum.tolist(),"systemDenominator":sysDen.tolist()})
     except:
         return json.dumps({"Error": "Error with closedloop with unitfeedback"})
 
@@ -42,6 +42,6 @@ def makeSystemRouter():
         sys = makeSystem(num, den)
         sysNum = sys.num[0][0]
         sysDen = sys.den[0][0]
-        return json.dumps({"systemNumerator": sysNum.__str__(),"systemDenominator":sysDen.__str__()})
+        return json.dumps({"systemNumerator": sysNum.tolist(),"systemDenominator":sysDen.tolist()})
     except:
         return json.dumps({"Error": "Error with makesystem"})
