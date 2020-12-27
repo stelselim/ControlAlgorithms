@@ -5,6 +5,7 @@ from src.utility.makeSystem import makeSystem
 from src.analysis.bode import bodePlotOfSystem
 from src.analysis.nyquist import nyquistPlotOfSystem
 from src.analysis.rlocus import rlocusOfSystem
+from src.analysis.pzmap import polesAndZeros
 
 
 analysis = Blueprint('analysis', __name__, template_folder='templates')
@@ -35,6 +36,16 @@ def rlocusPlotRouter():
         num = request.args.get('num')
         den = request.args.get('den')
         return rlocusOfSystem(makeSystem(num,den))
+    except:
+        return json.dumps({"Error": "Error with rlocusplotSystem"}) 
+    
+    
+@analysis.route('/poleszeros')
+def poleszerosRouter():
+    try:
+        num = request.args.get('num')
+        den = request.args.get('den')
+        return polesAndZeros(makeSystem(num,den))
     except:
         return json.dumps({"Error": "Error with rlocusplotSystem"}) 
     
