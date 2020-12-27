@@ -30,6 +30,7 @@ Maintainer: Selim Üstel<br/>
 * <a href="https://github.com/stelselim/ControlAlgorithms#nyquistplot"> nyquistplot </a>
 * <a href="https://github.com/stelselim/ControlAlgorithms#rlocusplot"> rlocusplot </a>
 * <a href="https://github.com/stelselim/ControlAlgorithms#closedloopunitfeedback"> closedloop/unitfeedback </a>
+* <a href="https://github.com/stelselim/ControlAlgorithms#poleszeros"> poleszeros </a>
 
 
 <br/>
@@ -450,6 +451,58 @@ transfer function
 #### den=2,0,5,2   for 2*s^3 + 5*s + 2  
 
 #### URL = https://controlalgo.ey.r.appspot.com/closedloop/unitfeedback?num=1,0,2&den=2,0,5,2
+
+<br>
+
+
+### poleszeros
+<p> Required URL Parameters </p>
+<p>
+num: as a numerator of transfer function
+</p>
+<p>
+den: as a denominator of transfer function
+</p>
+
+
+### Example - 1
+
+transfer function 
+<img src="https://github.com/stelselim/ControlAlgorithms/blob/master/tf1.png"/>
+
+#### num=1   for 1
+
+#### den=1,2   for s + 2
+
+#### URL = https://controlalgo.ey.r.appspot.com/poleszeros?num=1&den=1,2
+
+
+<br>
+
+
+### Example - 2
+
+transfer function 
+<img src="https://github.com/stelselim/ControlAlgorithms/blob/master/tf2.png"/>
+
+#### num=1,2   for s + 2
+
+#### den=1,5,2   for s^2 + 5*s + 2  
+
+#### URL = https://controlalgo.ey.r.appspot.com/poleszeros?num=1,2&den=1,5,2
+
+<br>
+
+### Example - 3
+
+transfer function 
+<img src="https://github.com/stelselim/ControlAlgorithms/blob/master/tf3.png"/>
+
+#### num=1,0,2   for s^2 + 2
+
+#### den=2,0,5,2   for 2*s^3 + 5*s + 2  
+
+#### URL = https://controlalgo.ey.r.appspot.com/poleszeros?num=1,0,2&den=2,0,5,2
 
 
 
