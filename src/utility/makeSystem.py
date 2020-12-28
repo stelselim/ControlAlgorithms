@@ -15,10 +15,10 @@ def makeSystem(num: str, den: str) -> control.TransferFunction:
     numInt = []
     denInt = []
     for e in num:
-        numInt.append(int(e))
+        numInt.append(float(e))
   
     for e in den:
-        denInt.append(int(e))
+        denInt.append(float(e))
 
     sys = control.TransferFunction(numInt,denInt)
     return sys

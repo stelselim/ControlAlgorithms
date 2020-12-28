@@ -22,16 +22,16 @@ def makeClosedLoopSystem(num: str, den: str, feedbackNum: str, feedbackDen: str)
     feedbackNumInt = []
     feedbackDenInt = []
     for e in num:
-        numInt.append(int(e))
+        numInt.append(float(e))
 
     for e in den:
-        denInt.append(int(e))
+        denInt.append(float(e))
 
     for e in feedbackNum:
-        feedbackNumInt.append(int(e))
+        feedbackNumInt.append(float(e))
 
     for e in feedbackDen:
-        feedbackDenInt.append(int(e))
+        feedbackDenInt.append(float(e))
 
     sys = control.TransferFunction(numInt, denInt)
     sys2 = control.TransferFunction(feedbackNumInt, feedbackDenInt)
